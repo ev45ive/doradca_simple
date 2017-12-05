@@ -3,7 +3,7 @@
 </p>
 <ul class="list-group"
   *ngFor="let job of jobs">
-  <li class="list-group-item">
+  <li class="list-group-item" [routerLink]=" '/job/details/' + job.objectId ">
     {{job.name}}
   </li>
 </ul>

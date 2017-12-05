@@ -18,7 +18,7 @@ export const routes: Routes = [
   { path: 'search', component: SearchPageComponent, pathMatch: 'full' },
   { path: 'search/results', component: SearchResultsPageComponent, pathMatch: 'full' },
   { path: 'search/advanced', component: SearchAdvancedPageComponent, pathMatch: 'full' },
-  { path: 'job/details', component: JobDetailsPageComponent, pathMatch: 'full' },
+  { path: 'job/details/:objectId', component: JobDetailsPageComponent, pathMatch: 'full' },
   { path: 'job/test', component: JobTestPageComponent, pathMatch: 'full' },
   { path: 'user/profile', component: ProfilePageComponent, pathMatch: 'full' },
   { path: 'user/signin', component: SigninPageComponent, pathMatch: 'full' },

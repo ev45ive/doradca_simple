@@ -20,6 +20,9 @@ export class SearchResultsPageComponent implements OnInit {
     this.http.get(this.jobs_url,{
       params:{
         where: `name LIKE '%${query}%'`
+        // AND salary > 6000 AND salary < 8000
+        // AND education IN ('higher','medium')
+        // AND sector.name != 'Medycyna'
       }
     })
       .subscribe(jobs => {
