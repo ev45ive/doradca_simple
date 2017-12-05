@@ -5,18 +5,37 @@ import { AppComponent } from './app.component';
 
 import { RouterModule, Routes } from '@angular/router';
 import { SearchPageComponent } from './search-page/search-page.component';
-import { SearchResultsPageComponent } from './search-results-page/search-results-page.component'
+import { SearchResultsPageComponent } from './search-results-page/search-results-page.component';
+import { SearchAdvancedPageComponent } from './search-advanced-page/search-advanced-page.component';
+import { JobDetailsPageComponent } from './job-details-page/job-details-page.component';
+import { ProfilePageComponent } from './profile-page/profile-page.component';
+import { SignupPageComponent } from './signup-page/signup-page.component';
+import { SigninPageComponent } from './signin-page/signin-page.component';
+import { JobTestPageComponent } from './job-test-page/job-test-page.component'
 
 export const routes: Routes = [
-  { path: '', component: SearchPageComponent, pathMatch: 'full' },
-  { path: 'search/results', component: SearchResultsPageComponent, pathMatch: 'full' }
+  { path: '', redirectTo:'search', pathMatch: 'full' },
+  { path: 'search', component: SearchPageComponent, pathMatch: 'full' },
+  { path: 'search/results', component: SearchResultsPageComponent, pathMatch: 'full' },
+  { path: 'search/advanced', component: SearchAdvancedPageComponent, pathMatch: 'full' },
+  { path: 'job/details', component: JobDetailsPageComponent, pathMatch: 'full' },
+  { path: 'job/test', component: JobTestPageComponent, pathMatch: 'full' },
+  { path: 'user/profile', component: ProfilePageComponent, pathMatch: 'full' },
+  { path: 'user/signin', component: SigninPageComponent, pathMatch: 'full' },
+  { path: 'user/signup', component: SignupPageComponent, pathMatch: 'full' },
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchPageComponent,
-    SearchResultsPageComponent
+    SearchResultsPageComponent,
+    SearchAdvancedPageComponent,
+    JobDetailsPageComponent,
+    ProfilePageComponent,
+    SignupPageComponent,
+    SigninPageComponent,
+    JobTestPageComponent
   ],
   imports: [
     BrowserModule,
