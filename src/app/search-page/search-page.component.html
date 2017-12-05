@@ -3,10 +3,14 @@
 </p>
 
 <div class="input-group">
-  <input type="text" class="form-control" placeholder="Search for..." aria-label="Search for...">
+  <input type="text" class="form-control" placeholder="Search for..."
+    #queryRef
+  >
   <span class="input-group-btn">
-        <button class="btn btn-secondary" type="button">Go!</button>
-      </span>
+    <button class="btn btn-secondary" type="button"
+      (click)="search(queryRef.value)"
+    >Go!</button>
+  </span>
 </div>
 
 <div class="row my-4">
@@ -16,6 +20,6 @@
 </div>
 <div class="row">
   <div class="col">
-  <button class="btn btn-primary btn-block">Rozpocznij Test</button>
+    <button class="btn btn-primary btn-block">Rozpocznij Test</button>
   </div>
 </div>

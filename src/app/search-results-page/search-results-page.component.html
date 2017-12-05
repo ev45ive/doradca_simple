@@ -1,3 +1,9 @@
 <p>
   search-results-page works!
 </p>
+<ul class="list-group"
+  *ngFor="let job of jobs">
+  <li class="list-group-item">
+    {{job.name}}
+  </li>
+</ul>
