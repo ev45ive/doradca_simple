@@ -9,7 +9,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 })
 export class JobDetailsPageComponent implements OnInit {
 
-  constructor(@Inject('JOBS_URL') private jobs_url,
+  constructor(@Inject('API_URL') private API_URL,
               private http:HttpClient,
               private route:ActivatedRoute) { }
 
@@ -17,7 +17,7 @@ export class JobDetailsPageComponent implements OnInit {
 
   ngOnInit() {
     let id = this.route.snapshot.paramMap.get('objectId')
-    this.http.get(this.jobs_url + '/' + id)
+    this.http.get(this.API_URL + 'data/jobs/' + id)
       .subscribe(job => {
         this.job = job;
       })
