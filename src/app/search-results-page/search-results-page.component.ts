@@ -32,19 +32,11 @@ export class SearchResultsPageComponent implements OnInit {
   }
 
   like(job) {
-    this.http.post(this.API_URL + 'data/favourite_jobs', {}, {
-      headers: {
-        'user-token': "6B34BBCA-C6F0-C536-FF39-A42FC7627200"
-      }
-    })
-      .subscribe(like =>
+    this.http.post(this.API_URL + 'data/favourite_jobs', {},)
+    .subscribe(like =>
 
-        this.http.post(this.API_URL
-          + 'data/favourite_jobs/' + like['objectId'] + '/job', [job['objectId']], {
-            headers: {
-              'user-token': "6B34BBCA-C6F0-C536-FF39-A42FC7627200"
-            }
-          })
+    this.http.post(this.API_URL
+    + 'data/favourite_jobs/' + like['objectId'] + '/job', [job['objectId']])
           .subscribe(rel => console.log(rel)))
 
   }

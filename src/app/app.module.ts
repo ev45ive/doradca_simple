@@ -13,6 +13,7 @@ import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { SignupPageComponent } from './signup-page/signup-page.component';
 import { SigninPageComponent } from './signin-page/signin-page.component';
 import { JobTestPageComponent } from './job-test-page/job-test-page.component'
+import { SessionModule } from "./session/session.module";
 
 export const routes: Routes = [
   { path: '', redirectTo:'search', pathMatch: 'full' },
@@ -42,6 +43,7 @@ export const routes: Routes = [
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    SessionModule,
     RouterModule.forRoot(routes, { useHash: true })
   ],
   providers: [

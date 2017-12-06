@@ -2,6 +2,9 @@
   signin-page works!
 </p>
 
+
+{{ session | json }}
+
 <form #signinForm="ngForm" (ngSubmit)="signin(signinForm.value)">
   <div class="form-group">
     <label for="">E-mail</label>
