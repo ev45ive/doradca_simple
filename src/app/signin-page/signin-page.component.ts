@@ -24,6 +24,8 @@ export class SigninPageComponent implements OnInit {
     this.http.post(this.API_URL + 'users/login', user)
       .subscribe(session => {
         this.sesionService.setSession(session)
+
+        this.router.navigate(['/'])
       })
   }
 

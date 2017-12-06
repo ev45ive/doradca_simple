@@ -14,6 +14,7 @@ import { SignupPageComponent } from './signup-page/signup-page.component';
 import { SigninPageComponent } from './signin-page/signin-page.component';
 import { JobTestPageComponent } from './job-test-page/job-test-page.component'
 import { SessionModule } from "./session/session.module";
+import { SessionPanelComponent } from './components/session-panel/session-panel.component';
 
 export const routes: Routes = [
   { path: '', redirectTo:'search', pathMatch: 'full' },
@@ -37,7 +38,8 @@ export const routes: Routes = [
     ProfilePageComponent,
     SignupPageComponent,
     SigninPageComponent,
-    JobTestPageComponent
+    JobTestPageComponent,
+    SessionPanelComponent
   ],
   imports: [
     BrowserModule,
